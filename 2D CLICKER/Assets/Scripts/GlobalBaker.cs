@@ -22,6 +22,8 @@ public class GlobalBaker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // Global stash of cookies/followers
         currentCash = CookieNumber.CookieCount;
        
 

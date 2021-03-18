@@ -9,6 +9,7 @@ public class MainButton : MonoBehaviour
 
     public void ClickTheButton()
     {
+        // Adds Folloers/cookie to the stash every click
         CookieNumber.CookieCount += 1;
     }
 
