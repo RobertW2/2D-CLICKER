@@ -9,7 +9,8 @@ public class PurchaseLog : MonoBehaviour
     public GameObject autoCookie;
     public GlobalBaker globalBaker;
     public GameObject priceText;
-    public Button baker;
+    
+    public Button button;
     //public int tomPrice = 3;
 
     private AutoFollower autoFollower;
@@ -25,23 +26,33 @@ public class PurchaseLog : MonoBehaviour
 
     private void Update()
     {
+
+        // If The current total is more than or equal to the cost of the upgrade, then allow to purchase.
         if (globalBaker.currentCash >= cost1)
         {
-            baker.interactable = true;
+            // Make button interactible
+            button.interactable = true;
         }
     }
 
     public void Upgrade()
     {
+        //If The current total is more than or equal to the cost of the upgrade, then allow to purchase.
+
         if (globalBaker.currentCash >= cost1)
         {
+            // Minus the cost from the total amount.
             CookieNumber.CookieCount -= cost1;
             AutoFollower.FollowerIncrease += increaseFollowerCount;
             autoCookie.SetActive(true);
 
+            // Double the price once bought.
             cost1 *= 2;
-            priceText.GetComponent<UnityEngine.UI.Text>().text = Name+ ": "  + cost1 +  "Followers";
+            // Update the Text of the upgrade button.
+            priceText.GetComponent<UnityEngine.UI.Text>().text = Name+ ": "  + cost1 +  " Followers";
+           
         }
     }
+
 
 }

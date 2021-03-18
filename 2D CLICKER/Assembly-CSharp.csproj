@@ -57,11 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PurchaseLog.cs" />
+    <Compile Include="Assets\Scripts\GlobalBaker.cs" />
     <Compile Include="Assets\Scripts\CookieNumber.cs" />
     <Compile Include="Assets\Scripts\MainButton.cs" />
-    <Compile Include="Assets\Scripts\AutoFollower.cs" />
-    <Compile Include="Assets\Scripts\GlobalBaker.cs" />
     <Compile Include="Assets\Scripts\FamousPerson2.cs" />
+    <Compile Include="Assets\Scripts\AutoFollower.cs" />
+    <Compile Include="Assets\Scripts\AMY.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
